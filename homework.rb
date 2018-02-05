@@ -74,7 +74,25 @@ def max(array)
 	puts array[-1]
 end
 	
-max(my_array)
+#max(my_array)
+
+#or without built in methods
+
+array2 = [1, 5, 23, 1212,  99, 56]
+
+def max2(array)
+	max = array[0]
+	for i in array
+		if i > max
+		   max = i
+		end
+		
+	end
+	puts max
+end
+
+
+max2(array2)
 
 
 #Create a function that takes two arguments - both of them arrays. 
@@ -93,6 +111,23 @@ def combo(a, b)
 end
 
 combo(array1, array2)
+
+#or without built in methods
+
+arrayName = ['harry', 'hermione', 'ron']
+arrayLastName = ['potter', 'granger', 'weasley']
+
+
+def combo2(a,b)
+i = 0
+while i < a.length
+	names = Hash.new 
+	puts names = {a[i] => b[i]}
+	i+=1
+end
+end
+
+combo2(arrayName, arrayLastName)
 
 #Write a program that prints the numbers from 1 to 100, except:
 
@@ -119,10 +154,16 @@ end
 #take one down, pass it around 98 bottles of root beer on the wall, 
 #98 bottles of root beer on the wall, 98 bottles of root beer...
 #take one down, pass it around 97 bottles of root beer on the wall," etc., all the way to 0 bottles.
+
 i = 99
-while i>0
+while i>1
 	puts "#{i} bottles of beer on the wall #{i} bottles of beer. 
 	take one down, pass it around, #{i-1} bottles of beer on the wall"
+	i -= 1
+end
+while i < 2 && i > 0
+	puts "#{i} bottle of beer on the wall #{i} bottle of beer. 
+	take one down, pass it around, 0 bottles of beer on the wall"
 	i -= 1
 end
 
